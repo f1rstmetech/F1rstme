@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — F1rstme Tech</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="logo-cropped.png" alt="F1RSTME Tech" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="compare.html">Compare</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Login form -->
+<div class="admin-box" id="login-box">
+  <h2>Admin login</h2>
+  <div id="login-msg"></div>
+  <div class="field">
+    <label>Email</label>
+    <input type="email" id="login-email" placeholder="you@example.com">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" id="login-password" placeholder="••••••••">
+  </div>
+  <button class="btn btn-primary" id="login-btn" style="width:100%; justify-content:center;">Log in</button>
+</div>
+
+<!-- Dashboard (hidden until logged in) -->
+<div class="wrap" id="dashboard" style="display:none; padding-top: 40px;">
+  <div class="section-head">
+    <h2>Dashboard</h2>
+    <button class="btn" id="logout-btn">Log out</button>
+  </div>
+
+  <div class="tab-row">
+    <button class="tab-btn active" data-tab="tab-phones">Phones</button>
+    <button class="tab-btn" data-tab="tab-news">News</button>
+    <button class="tab-btn" data-tab="tab-settings">Contact & Social</button>
+  </div>
+
+  <!-- Phones tab -->
+  <div class="admin-panel active" id="tab-phones">
+    <h3>Add a phone</h3>
+    <div id="phone-msg"></div>
+    <div class="form-grid">
+      <div class="field"><label>Name</label><input id="p-name" placeholder="iPhone 17 Pro"></div>
+      <div class="field"><label>Brand</label><input id="p-brand" placeholder="Apple"></div>
+      <div class="field"><label>Price (₹)</label><input id="p-price" type="number" placeholder="99900"></div>
+      <div class="field"><label>Image URL</label><input id="p-image" placeholder="https://..."></div>
+      <div class="field"><label>Display</label><input id="p-display" placeholder="6.3&quot; OLED 120Hz"></div>
+      <div class="field"><label>Chipset</label><input id="p-chipset" placeholder="A19 Pro"></div>
+      <div class="field"><label>RAM (GB)</label><input id="p-ram" type="number" placeholder="8"></div>
+      <div class="field"><label>Storage (GB)</label><input id="p-storage" type="number" placeholder="256"></div>
+      <div class="field"><label>Battery (mAh)</label><input id="p-battery" type="number" placeholder="3600"></div>
+      <div class="field"><label>Main camera (MP)</label><input id="p-camera" type="number" placeholder="48"></div>
+      <div class="field"><label>Your score (0–100)</label><input id="p-score" type="number" placeholder="92"></div>
+    </div>
+    <div class="field"><label>Review text</label><textarea id="p-review" placeholder="Full review write-up..."></textarea></div>
+    <button class="btn btn-primary" id="add-phone-btn">Add phone</button>
+
+    <h3 style="margin-top:40px;">Existing phones</h3>
+    <div id="phone-list"></div>
+  </div>
+
+  <!-- News tab -->
+  <div class="admin-panel" id="tab-news">
+    <h3>Add a news post</h3>
+    <div id="news-msg"></div>
+    <div class="form-grid">
+      <div class="field"><label>Title</label><input id="n-title" placeholder="Snapdragon leak..."></div>
+      <div class="field"><label>Tag</label><input id="n-tag" placeholder="Chipsets"></div>
+    </div>
+    <div class="field"><label>Excerpt (short summary)</label><textarea id="n-excerpt" placeholder="One or two sentences..."></textarea></div>
+    <div class="field"><label>Full body</label><textarea id="n-body" placeholder="Full article text..."></textarea></div>
+    <button class="btn btn-primary" id="add-news-btn">Publish post</button>
+
+    <h3 style="margin-top:40px;">Existing posts</h3>
+    <div id="news-list"></div>
+  </div>
+
+  <!-- Settings tab -->
+  <div class="admin-panel" id="tab-settings">
+    <h3>Contact & social links</h3>
+    <div id="settings-msg"></div>
+    <div class="form-grid">
+      <div class="field"><label>Instagram URL</label><input id="s-instagram" placeholder="https://instagram.com/..."></div>
+      <div class="field"><label>YouTube URL</label><input id="s-youtube" placeholder="https://youtube.com/..."></div>
+      <div class="field"><label>Contact email</label><input id="s-email" placeholder="hello@..."></div>
+      <div class="field"><label>Contact phone</label><input id="s-phone" placeholder="+91..."></div>
+    </div>
+    <button class="btn btn-primary" id="save-settings-btn">Save changes</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

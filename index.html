@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F1rstme Tech — daily tech news & phone comparisons</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="logo-cropped.png" alt="F1RSTME Tech" class="logo-img"></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="news.html">News</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="compare.html">Compare</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker-strip"><div class="ticker-track" id="ticker">Loading latest specs…</div></div>
+
+<section class="hero">
+  <div class="wrap">
+    <img src="logo-cropped.png" alt="F1RSTME Tech" class="hero-logo">
+    <div class="hero-eyebrow">// daily spec sheet</div>
+    <h1>Tech, decoded<br>one spec at a time.</h1>
+    <p>Phone news, in-depth reviews, and side-by-side comparisons — no fluff, just the numbers that matter.</p>
+    <div class="btn-row">
+      <a href="compare.html" class="btn btn-primary">Compare phones</a>
+      <a href="#" class="btn" id="ig-link" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" class="btn" id="yt-link" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Latest news</h2>
+      <a href="news.html">View all →</a>
+    </div>
+    <div class="post-grid" id="post-grid"><div class="empty-state">Loading…</div></div>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Latest phones</h2>
+      <a href="reviews.html">View all →</a>
+    </div>
+    <div class="phone-grid" id="phone-grid"><div class="empty-state">Loading…</div></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div id="footer-copy">© 2026 F1rstme Tech</div>
+  <div><a href="#" id="ig-link-2" target="_blank" rel="noopener">Instagram</a> · <a href="#" id="yt-link-2" target="_blank" rel="noopener">YouTube</a> · <span id="footer-email"></span></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
