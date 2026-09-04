@@ -1,18 +1,27 @@
-# F1RSTME TECH PRO
+# F1RSTME TECH — Proper Website
 
-Includes a premium tech-news homepage, latest model catalogue, comparison engine, reviews, Instagram/YouTube controls and admin dashboard.
+This version includes:
+- Real clickable device cards
+- Dedicated `product.html?id=...` device pages
+- Full specifications, price, rating, pros and cons
+- Search
+- Device comparison
+- Reviews
+- Instagram + YouTube links
+- Admin dashboard for adding devices/specs/reviews/social links
+- Optional automatic news endpoint
+- Responsive mobile/desktop design
 
-### Automatic news
-The included Supabase Edge Function uses NewsAPI server-side. Keep the NewsAPI secret out of public GitHub code. Configure the function with `NEWS_API_KEY`, store articles in Supabase, and point `config.js` `NEWS_ENDPOINT` at your public endpoint.
+## Important
+The static admin uses browser localStorage. This is suitable for testing only.
+For a real public admin, use Supabase Auth + Postgres + Row Level Security.
 
-### Admin
-The current browser demo lets you add models/specs, reviews and social links. For production, connect Supabase Auth + Postgres + RLS. Supabase supports Auth and Postgres through its JS client.
+## Automatic news
+Deploy `supabase/functions/fetch-news/index.ts`, set server secrets, then put its public URL into `config.js` as `NEWS_ENDPOINT`.
+Never put a private NewsAPI key in `index.html`, `app.js`, `admin.html`, or any public GitHub file.
 
-### Files
-`index.html` frontend
-`admin.html` admin
-`app.js` frontend data/rendering
-`admin.js` admin controls
-`config.js` configuration
-`supabase/schema.sql` database
-`supabase/functions/fetch-news/index.ts` automatic news ingestion
+## GitHub Pages
+Upload the root files to your existing `F1rstme` repository:
+index.html, product.html, admin.html, style.css, app.js, admin.js, config.js, README.md
+The URL remains:
+https://f1rstmetech.github.io/F1rstme/
