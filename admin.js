@@ -1,0 +1,8 @@
+let D=JSON.parse(localStorage.f1_devices||"null")||[];let R=JSON.parse(localStorage.f1_reviews||"null")||[];let S=JSON.parse(localStorage.f1_social||'{"youtube":"","instagram":""}');
+loginBtn.onclick=()=>{localStorage.f1_admin="1";login.classList.add("hidden");dash.classList.remove("hidden")};if(localStorage.f1_admin){login.classList.add("hidden");dash.classList.remove("hidden")}
+document.querySelectorAll(".tabs button").forEach(x=>x.onclick=()=>{document.querySelectorAll(".tab").forEach(y=>y.classList.add("hidden"));document.getElementById(x.dataset.t).classList.remove("hidden")});
+saveD.onclick=()=>{let specs={};try{specs=JSON.parse(ds.value||"{}")}catch{alert("Invalid JSON");return}D.unshift({name:dn.value,brand:db.value,price:Number(dp.value||0),image:di.value,specs});localStorage.f1_devices=JSON.stringify(D);dn.value=db.value=dp.value=di.value=ds.value="";render();alert("Model saved")};
+saveR.onclick=()=>{R.unshift({title:rt.value,model:rm.value,rating:Number(rr.value),text:rx.value});localStorage.f1_reviews=JSON.stringify(R);render();alert("Review saved")};
+saveS.onclick=()=>{S={instagram:si.value,youtube:sy.value};localStorage.f1_social=JSON.stringify(S);alert("Social links saved")};
+saveN.onclick=()=>{localStorage.f1_news_key=nk.value;localStorage.f1_news_query=nq.value;alert("News settings saved. Use the included server function for production automatic updates.")};
+function render(){deviceList.innerHTML=D.map(x=>`<div class="item"><b>${x.brand} ${x.name}</b> — ₹${Number(x.price).toLocaleString("en-IN")}</div>`).join("");reviewList.innerHTML=R.map(x=>`<div class="item"><b>${x.title}</b> — ${x.rating}/10</div>`).join("")}render();
