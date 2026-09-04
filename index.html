@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="F1RSTME TECH — latest tech news, phones, reviews and comparisons.">
+<title>F1RSTME TECH — Tech, First.</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="./index.html">F1RSTME <span>TECH</span></a>
+  <nav class="nav"><a href="#news">News</a><a href="#devices">Devices</a><a href="#reviews">Reviews</a><a href="#compare">Compare</a><a href="#videos">Videos</a></nav>
+  <div class="head-actions"><button id="searchBtn" aria-label="Search">⌕</button><button id="menuBtn" aria-label="Menu">☰</button></div>
+</header>
+<div class="ticker">F1RSTME TECH • LATEST NEWS • NEW LAUNCHES • REVIEWS • COMPARISONS • INDIA</div>
+
+<main>
+<section class="hero">
+  <div class="hero-copy"><small>F1RSTME TECH / THE NEW STANDARD</small>
+  <h1>Tech.<br><i>First.</i><br>Always.</h1>
+  <p>Independent tech coverage for phones, laptops, gadgets and everything worth knowing before you buy.</p>
+  <a class="btn dark" href="#news">LATEST NEWS ↗</a>
+  <a class="btn" href="#devices">LATEST DEVICES</a></div>
+  <div class="hero-card"><div class="f1">F1</div><small>F1RSTME TECH</small><strong>THE NEXT<br>DEVICE<br>IS HERE.</strong></div>
+</section>
+
+<section class="quick"><a href="#news">01&nbsp; Latest News →</a><a href="#devices">02&nbsp; Latest Devices →</a><a href="#reviews">03&nbsp; Reviews →</a><a href="#compare">04&nbsp; Compare →</a></section>
+
+<section id="news" class="section">
+  <small>01 / LIVE FEED</small><div class="section-head"><h2>Latest tech news.</h2><button class="text-btn" id="refreshNews">REFRESH ↻</button></div>
+  <div id="newsGrid" class="news-grid"></div>
+</section>
+
+<section id="devices" class="section muted">
+  <small>02 / DEVICES</small><div class="section-head"><h2>Latest models.</h2><button class="text-btn" id="allDevices">VIEW ALL →</button></div>
+  <div id="deviceGrid" class="device-grid"></div>
+</section>
+
+<section id="compare" class="compare-section">
+  <div><small>03 / COMPARISON</small><h2>Which one<br><i>should you buy?</i></h2><p>Compare the specifications and India price of any two devices in your catalogue.</p></div>
+  <div class="compare-panel"><div class="selects"><select id="compareA"></select><b>VS</b><select id="compareB"></select></div><button class="btn gold" id="compareNow">COMPARE DEVICES ↗</button></div>
+  <div id="compareResult" class="compare-result"></div>
+</section>
+
+<section id="reviews" class="section">
+  <small>04 / REVIEWS</small><h2>Real-world reviews.</h2><div id="reviewGrid" class="review-grid"></div>
+</section>
+
+<section id="videos" class="video-section"><div><small>05 / WATCH</small><h2>Unbox.<br>Review.<br><i>Decide.</i></h2></div>
+<div><p>Follow F1RSTME TECH for unboxings, camera tests, comparisons and quick technology updates.</p><a id="youtubeLink" class="btn dark" target="_blank" rel="noopener">YOUTUBE ↗</a> <a id="instagramLink" class="btn" target="_blank" rel="noopener">INSTAGRAM ↗</a></div></section>
+</main>
+
+<footer><div><a class="brand" href="./index.html">F1RSTME <span>TECH</span></a><p>TECH, FIRST.</p></div><div><a href="#news">News</a><a href="#devices">Devices</a><a href="#reviews">Reviews</a><a href="./admin.html">Admin</a></div><small>© 2026 F1RSTME TECH. All rights reserved.</small></footer>
+
+<div id="searchPanel" class="overlay"><button class="close" id="searchClose">×</button><div class="searchbox"><input id="searchInput" placeholder="Search phones, news, reviews…"><div id="searchResults"></div></div></div>
+<div id="menuPanel" class="overlay dark-overlay"><button class="close" id="menuClose">×</button><nav class="big-nav"><a href="#news">01 News</a><a href="#devices">02 Devices</a><a href="#reviews">03 Reviews</a><a href="#compare">04 Compare</a><a href="./admin.html">05 Admin</a></nav></div>
+
+<script src="./config.js"></script><script src="./app.js"></script>
+</body></html>

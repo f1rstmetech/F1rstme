@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>F1RSTME TECH — Admin</title><link rel="stylesheet" href="./style.css"></head>
+<body class="admin-body"><header class="header"><a class="brand" href="./index.html">F1RSTME <span>TECH</span></a><a class="btn small" href="./index.html">VIEW SITE ↗</a></header>
+<main class="admin-wrap">
+<section id="loginCard" class="admin-card"><small>F1RSTME TECH / PRIVATE AREA</small><h1>Admin<br><i>control.</i></h1><p>Demo login for the static version. For production, connect Supabase Auth before publishing the admin publicly.</p><input id="adminEmail" placeholder="Admin email"><input id="adminPassword" type="password" placeholder="Password"><button class="btn dark" id="login">SIGN IN</button></section>
+<section id="dashboard" class="hidden">
+<div class="admin-title"><div><small>F1RSTME TECH / DASHBOARD</small><h1>Manage the site.</h1></div><button class="btn" id="logout">LOG OUT</button></div>
+<div class="tabs"><button data-tab="models">Models</button><button data-tab="reviewsTab">Reviews</button><button data-tab="social">Social</button><button data-tab="newsSettings">News</button></div>
+<div id="models" class="tab-panel"><h2>Add / update device</h2>
+<div class="form-grid"><input id="modelBrand" placeholder="Brand"><input id="modelName" placeholder="Model name"><input id="modelPrice" type="number" placeholder="India price"><input id="modelImage" placeholder="Image URL"><input id="modelRelease" placeholder="Release date"><input id="modelRating" type="number" step=".1" placeholder="Rating / 10"></div>
+<textarea id="modelSpecs" placeholder='Paste specs JSON, e.g. {"display":"6.9-inch AMOLED","processor":"Snapdragon flagship","ram":"12GB","storage":"256GB","rearCamera":"200MP + 50MP","frontCamera":"12MP","battery":"5000mAh","charging":"65W","os":"Android","network":"5G"}'></textarea>
+<textarea id="modelPros" placeholder="Pros — one per line"></textarea><textarea id="modelCons" placeholder="Cons — one per line"></textarea>
+<button class="btn dark" id="saveModel">SAVE DEVICE</button><div id="modelList"></div></div>
+<div id="reviewsTab" class="tab-panel hidden"><h2>Add review</h2><div class="form-grid"><input id="reviewTitle" placeholder="Review title"><input id="reviewModel" placeholder="Model"><input id="reviewRating" type="number" step=".1" placeholder="Rating / 10"></div><textarea id="reviewBody" placeholder="Review summary"></textarea><button class="btn dark" id="saveReview">SAVE REVIEW</button><div id="reviewList"></div></div>
+<div id="social" class="tab-panel hidden"><h2>Social pages</h2><input id="instagram" placeholder="Instagram URL"><input id="youtube" placeholder="YouTube URL"><button class="btn dark" id="saveSocial">SAVE SOCIAL LINKS</button></div>
+<div id="newsSettings" class="tab-panel hidden"><h2>Automatic news</h2><p>Enter your public news endpoint after connecting the included Supabase Edge Function. Never expose a private News API key in this page.</p><input id="newsEndpoint" placeholder="https://your-project.supabase.co/functions/v1/fetch-news"><button class="btn dark" id="saveNews">SAVE NEWS ENDPOINT</button></div>
+</section></main><script src="./config.js"></script><script src="./admin.js"></script></body></html>
