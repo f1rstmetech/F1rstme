@@ -1,0 +1,88 @@
+{
+  "contact": {
+    "email": "hello@f1rstmetech.example",
+    "instagram": "https://instagram.com/f1rstme_tech",
+    "youtube": "https://youtube.com/@f1rstmetech?si=oRm-Sj-Ch2vsQF8A",
+    "whatsapp": ""
+  },
+  "devices": [
+    {
+      "id": "d1788602800600",
+      "name": "Galaxy A26",
+      "brand": "Samsung",
+      "category": "Mid Range",
+      "price": "₹23,499",
+      "launch": "2025",
+      "image": "",
+      "review": "\"Sleek design with an IP67 rating and the longest software support in its price range — six years of OS updates. The main trade-off is a rear camera that doesn't quite keep pace with rivals, and there's no charger in the box.\"",
+      "specs": {
+        "Display": "6.7\" Super AMOLED, FHD+ 120Hz",
+        "Processor": "Exynos 1380",
+        "Camera": "50MP + 8MP + 2MP, 13MP front",
+        "Battery": "5000mah, 25W wired"
+      }
+    },
+    {
+      "id": "d1",
+      "name": "Galaxy S25 Ultra",
+      "brand": "Samsung",
+      "category": "Flagship",
+      "price": "₹1,29,999",
+      "launch": "2026",
+      "image": "",
+      "specs": {
+        "Display": "6.9\" QHD+ LTPO AMOLED, 120Hz",
+        "Processor": "Snapdragon 8 Elite for Galaxy",
+        "RAM": "12GB",
+        "Storage": "256GB / 512GB / 1TB",
+        "Camera": "200MP + 50MP + 10MP + 12MP",
+        "Battery": "5000mAh, 45W wired"
+      },
+      "review": "Sharper zoom, brighter outdoor screen and noticeably longer battery life than last year's model. The S-Pen still feels like an afterthought for most buyers."
+    },
+    {
+      "id": "d2",
+      "name": "iPhone 17 Pro",
+      "brand": "Apple",
+      "category": "Flagship",
+      "price": "₹1,44,900",
+      "launch": "2026",
+      "image": "",
+      "specs": {
+        "Display": "6.3\" Super Retina XDR, 120Hz",
+        "Processor": "A19 Pro",
+        "RAM": "8GB",
+        "Storage": "256GB / 512GB / 1TB",
+        "Camera": "48MP + 48MP + 12MP",
+        "Battery": "Up to 29 hrs video playback"
+      },
+      "review": "The camera system is the most consistent in low light we've tested this year. Battery life is strong, though the always-on display still dims more than it needs to."
+    },
+    {
+      "id": "d3",
+      "name": "OnePlus 13R",
+      "brand": "OnePlus",
+      "category": "Mid-range",
+      "price": "₹42,999",
+      "launch": "2025",
+      "image": "",
+      "specs": {
+        "Display": "6.78\" AMOLED, 120Hz",
+        "Processor": "Snapdragon 8s Gen 4",
+        "RAM": "12GB / 16GB",
+        "Storage": "256GB",
+        "Camera": "50MP + 8MP + 2MP",
+        "Battery": "6000mAh, 80W wired"
+      },
+      "review": "Best value flagship-lite this quarter — the charging speed alone makes it hard to go back to anything slower."
+    }
+  ],
+  "news": [
+    {
+      "title": "Welcome to F1RSTME TECH",
+      "summary": "This is a placeholder story. Add real stories from the Admin panel, or let the live feed below pull the latest tech headlines automatically.",
+      "date": "2026-09-01",
+      "link": ""
+    }
+  ]
+}
