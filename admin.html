@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — F1RSTME TECH</title>
+<link rel="icon" href="logo-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo-icon.png" alt="F1RSTME TECH">
+      <span>F1RSTME <em>TECH</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">← Back to site</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="admin-lock" class="admin-lock">
+  <span class="eyebrow">Restricted</span>
+  <h2>Admin sign-in</h2>
+  <input type="password" id="admin-pass" placeholder="Password">
+  <button class="btn btn-yellow" style="width:100%;justify-content:center;" id="login-btn">Enter</button>
+  <p id="lock-error" style="color:#b3261e;font-size:0.85rem;margin-top:10px;"></p>
+</div>
+
+<div id="admin-panel" class="admin-shell" style="display:none;">
+  <span class="eyebrow">Admin panel</span>
+  <h2 style="font-size:1.8rem;margin:6px 0 20px;">Manage F1RSTME TECH</h2>
+
+  <p class="notice">This site is hosted on GitHub Pages, which has no database. Changes here save to this browser instantly so you can preview them, but to make them live for everyone you need to press <b>Export data.json</b> below and upload that file to your GitHub repo, replacing the old one.</p>
+
+  <div class="admin-card">
+    <h2>Add a new model</h2>
+    <form id="device-form">
+      <div class="two-col">
+        <div class="field"><label>Device name</label><input type="text" id="f-name" required></div>
+        <div class="field"><label>Brand</label><input type="text" id="f-brand"></div>
+      </div>
+      <div class="two-col">
+        <div class="field"><label>Category</label><input type="text" id="f-category" placeholder="Flagship / Mid-range / Budget"></div>
+        <div class="field"><label>Launch year</label><input type="text" id="f-launch"></div>
+      </div>
+      <div class="two-col">
+        <div class="field"><label>Price</label><input type="text" id="f-price" placeholder="₹49,999"></div>
+        <div class="field"><label>Image URL (optional)</label><input type="text" id="f-image" placeholder="https://…"></div>
+      </div>
+      <div class="field">
+        <label>Specs</label>
+        <div id="spec-rows"></div>
+        <button type="button" id="add-spec-btn" class="btn btn-outline on-light" style="margin-top:6px;padding:8px 16px;font-size:0.75rem;">+ Add spec row</button>
+      </div>
+      <div class="field"><label>Review / verdict (optional)</label><textarea id="f-review"></textarea></div>
+      <button class="btn btn-yellow" type="submit">Save device</button>
+    </form>
+  </div>
+
+  <div class="admin-card">
+    <h2>Existing devices</h2>
+    <div id="device-list"></div>
+  </div>
+
+  <div class="admin-card">
+    <h2>Post a news update</h2>
+    <form id="news-form">
+      <div class="field"><label>Headline</label><input type="text" id="n-title" required></div>
+      <div class="field"><label>Summary</label><textarea id="n-summary"></textarea></div>
+      <div class="two-col">
+        <div class="field"><label>Date</label><input type="date" id="n-date"></div>
+        <div class="field"><label>Link (optional)</label><input type="text" id="n-link" placeholder="https://…"></div>
+      </div>
+      <button class="btn btn-yellow" type="submit">Publish post</button>
+    </form>
+  </div>
+
+  <div class="admin-card">
+    <h2>Contact details</h2>
+    <form id="contact-form">
+      <div class="field"><label>Email</label><input type="text" id="c-email"></div>
+      <div class="field"><label>Instagram URL</label><input type="text" id="c-instagram"></div>
+      <div class="field"><label>YouTube URL</label><input type="text" id="c-youtube"></div>
+      <div class="field"><label>WhatsApp (optional)</label><input type="text" id="c-whatsapp"></div>
+      <button class="btn btn-yellow" type="submit">Save contact info</button>
+    </form>
+  </div>
+
+  <div class="admin-card">
+    <h2>Publish your changes</h2>
+    <p style="font-size:0.88rem;color:var(--steel);margin-bottom:14px;">Download the updated data file, then upload it to your GitHub repo (replace <code>data.json</code>) so the live site updates for every visitor.</p>
+    <button class="btn btn-yellow" id="export-btn">Export data.json</button>
+    <div style="margin-top:16px;">
+      <label class="field" style="margin-bottom:0;"><span style="display:block;margin-bottom:6px;font-size:0.78rem;font-weight:600;text-transform:uppercase;color:var(--steel);">Or import a data.json to load it here</span>
+        <input type="file" id="import-input" accept="application/json">
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

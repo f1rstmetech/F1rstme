@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F1RSTME TECH — Tech, First.</title>
+<meta name="description" content="F1RSTME TECH — latest tech news, phones, reviews and comparisons.">
+<link rel="icon" href="logo-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo-icon.png" alt="F1RSTME TECH">
+      <span>F1RSTME <em>TECH</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#news">News</a></li>
+      <li><a href="#devices">Devices</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#compare">Compare</a></li>
+      <li><a class="admin-link" href="admin.html">Admin</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <img class="hero-banner" src="logo-banner.png" alt="F1RSTME TECH — Tech, First, Always">
+  <div class="hero-copy">
+    <span class="eyebrow">India · Phones · Reviews · Comparisons</span>
+    <h1>Know the spec sheet <i>before</i> you spend.</h1>
+    <p>Daily tech news, honest reviews and side-by-side comparisons — so the next phone you buy is the right one.</p>
+    <div class="hero-cta">
+      <a class="btn btn-yellow" href="#devices">Browse devices</a>
+      <a class="btn btn-outline" href="#compare">Compare two phones</a>
+    </div>
+  </div>
+</header>
+<div class="seam"></div>
+
+<section id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Live feed</span>
+        <h2>Latest tech news</h2>
+      </div>
+      <button class="section-refresh" id="refresh-news">Refresh ↻</button>
+    </div>
+    <div class="news-grid" id="news-live"></div>
+  </div>
+</section>
+
+<section id="news-desk" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">From the desk</span>
+        <h2>Posted by F1RSTME</h2>
+      </div>
+    </div>
+    <div class="news-grid" id="news-manual"></div>
+  </div>
+</section>
+
+<section id="devices" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Catalogue</span>
+        <h2>Latest models</h2>
+      </div>
+    </div>
+    <div class="device-grid" id="device-grid"></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">In depth</span>
+        <h2>Reviews</h2>
+      </div>
+    </div>
+    <p style="max-width:640px;color:var(--steel);">Every device in the catalogue above carries a short verdict from our team — scroll its spec card to read it, or open Compare to weigh two phones against each other.</p>
+  </div>
+</section>
+
+<section id="compare" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Decide faster</span>
+        <h2>Which one should you buy?</h2>
+      </div>
+    </div>
+    <div class="compare-picker">
+      <select id="compare-a"></select>
+      <span class="vs-badge">VS</span>
+      <select id="compare-b"></select>
+    </div>
+    <div id="compare-output"><p class="compare-empty">Pick two devices above to see them side by side.</p></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">F1RSTME TECH</div>
+      <ul class="footer-links">
+        <li><a data-contact="instagram" href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a data-contact="youtube" href="#" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a data-contact="email" href="#">Email</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 F1RSTME TECH. All rights reserved.</span>
+      <span>Tech, first. Always.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
